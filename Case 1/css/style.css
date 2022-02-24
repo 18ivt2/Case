@@ -1,0 +1,287 @@
+body{
+    padding: 50px;
+    background-color: #f2f2f2;
+    font-family:    sans-serif;
+}
+.checkbox-block{
+    display: flex;
+    max-width: 176px;
+    min-height: 309px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #fff;
+    border-radius: 10px;
+   
+}
+.checkbox{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.checkbox-name{
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+}
+.radio-description{
+    position: relative;
+    cursor: pointer;
+    padding-left: 25px;
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 400;
+    color: #333;
+   
+}
+.radio-description:not(:last-child){
+    margin-bottom: 20px;
+}
+.input-radio{
+    display: none;
+}
+.input-radio + .checboxCustom{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #999;
+    border-radius: 3px;
+}
+.input-radio + .checboxCustom::before{
+    content: url(../img/Rectangle99.svg);
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    transform: translate(3px,-4px);
+    transition: opacity .3s ease-in-out;
+}
+.input-radio:checked + .checboxCustom::before{
+    opacity: 1;
+}
+.input-radio:checked + .checboxCustom{
+    border: 1px solid #CCB26E;
+    transition: border .3s ease-in-out;
+}
+.selector-block{
+    margin-top: 30px;
+}
+.choices{
+    max-width: 176px;
+    max-height: 39px;
+    border-radius: 10px;
+}
+.choices__inner{
+    max-width: 168.5px;
+    min-height: 0px;
+    padding-right: 0;
+    border: transparent;
+    border-radius: 10px;
+    background: #fff;
+}
+.choices__list{
+    border: transparent;
+}
+.choices__item{
+    max-width: 176px;
+    border: transparent;
+}
+.is-open .choices__list--dropdown{
+    position: absolute;
+    z-index: 1;
+    padding-top: 20px;
+    border-radius: 0 0 10px 10px;
+    margin-top: -6px;
+    border-right: 1px solid #CCB26E;
+    border-left: 1px solid #CCB26E;
+    border-bottom: 1px solid #CCB26E;
+}
+.choices[data-type*=select-one]::after{
+    display: none;
+}
+.choices[data-type*=select-one]::before{
+    content: url(../img/Rectangle141.svg);
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    right: 14.69px;
+    top: 10px;
+}
+.is-open.choices[data-type*=select-one]::before{
+    content: url(../img/Rectangle1412.svg);
+    position: absolute;
+    z-index: 3;
+    width: 8px;
+    height: 8px;
+    right: 14.69px;
+    top: 14px;
+}
+.choices__list--dropdown .choices__item--selectable.is-highlighted {
+    background-color: transparent;
+}
+.choices__item--disabled{
+    display: none;
+}
+.choices__item--selectable:after{
+    display: none;
+}
+.is-open .choices__inner{
+    position: relative;
+    z-index: 2;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #CCB26E;
+}
+[class*="ground-pane"]{
+    filter: grayscale(1);
+}
+#myMap1{
+    margin-top: 300px;
+}
+.customScroll{
+    margin-top: 80px;
+    background: #fff;
+    max-width: 399px;
+    max-height: 310px;
+    padding-top: 20px;
+    padding-left: 29px;
+    padding-right: 30px;
+}
+.customScroll-text{
+    margin: 0;
+    max-width: 340px;
+    font-size: 14px;
+    line-height: 170%;
+    font-weight: 400;
+}
+.simplebar-content-wrapper {
+    overflow: auto;
+      }
+.simplebar-scrollbar::before {
+    background-color: #CCB26E;
+ }
+ .tol-text{
+     
+    max-width: 268px;
+    font-size: 14px;
+    line-height: 170%;
+    font-weight: 400;
+    margin: 0;
+ }
+ .tooltip{
+    max-width: 268px;
+    min-height: 160px;
+    font-size: 14px;
+    line-height: 170%;
+    font-weight: 400;
+    background-color: #fff;
+    margin-top: 30px;
+    padding: 20px 78px 20px 29px;
+}
+.marker{
+    position: relative;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    vertical-align: middle;
+    background-image: url(../img/Subtract.svg);
+}
+.popup{
+    text-align: center;
+    position: absolute;
+    z-index: 2;
+    width: 163px;
+    min-height: 31px;
+    right: -70.5px;
+    bottom: 100%;
+    min-height: 31px;
+    background-color: #333;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    color: #fff;
+    margin-bottom: 10px;
+    visibility: hidden;
+}
+.popup::before{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 77px;
+    top:  27px;
+    width: 14.39px;
+    height: 14.28px;
+    background-color: #333;
+    transform: matrix(-0.71, -0.71, -0.71, 0.71, 0, 0);
+}
+.marker:hover,
+.marker:focus{
+    background-image: url(../img/Subtract2.svg);
+}
+.marker:hover .popup,
+.marker:focus .popup{
+    visibility: visible;
+}
+
+.form{
+    margin-top: 30px;
+    max-width: 440px;
+    min-height: 410px;
+    background-color: #000;
+    border-radius: 10px;
+    padding: 38px 30px 39px 30px;
+}
+.input-form{
+    width: 100%;
+    height: 60px;
+    border-radius: 10px;
+    border: transparent;
+    
+}
+.input__form-block{
+    display: flex;
+    flex-direction: column;
+
+}
+.input__form-block:not(:last-child){
+    margin-bottom: 31px;
+}
+.js-validate-error-label{
+    order: -1;
+    margin-bottom: 5px;
+    margin-left: 20px;
+}
+.input-form::placeholder{
+    padding-left: 20px;
+}
+.form-btn{
+    margin-top: 31px;
+    font-size: 20px;
+    line-height: 23px;
+    font-weight: 400;
+    color: #fff;
+    background: #ff5c00;
+    padding: 17px 53px;
+    border-radius: 10px;
+    border: transparent;
+}
+.form-description{
+    margin-left: 20px;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 400;
+    color: #ff5c00;
+}
+@media (min-width: 640px) {
+.choices__list--dropdown .choices__item--selectable {
+    padding-right: 60px;
+}
+}
