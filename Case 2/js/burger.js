@@ -1,0 +1,14 @@
+document.addEventListener('DOMContentLoaded',function(){
+    document.querySelector('#burger').addEventListener('click',function(){
+        document.querySelector('#menu').classList.toggle('is-active')
+    })
+    document.querySelector('#burger').addEventListener('click',function(){
+        document.querySelector('#burger__span',).classList.toggle('burger-active')
+    })
+    document.querySelector('#burger').addEventListener('click',function(){
+        document.querySelector('#burger__span2',).classList.toggle('burger-active2')
+    })
+    document.querySelector('#burger').addEventListener('click',function(){
+        document.querySelector('#burger__span3',).classList.toggle('burger-active3')
+    })
+})
